@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "Delete 50% Tabs",
+  "version": "0.1",
+  "content_security_policy":"script-src 'self' https://apis.google.com; object-src 'self'",
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["scripts/jquery/jquery-3.4.1.slim.min.js","scripts/content/content.js"]
+    }
+  ],
+  "permissions": [
+    "tabs"
+  ],
+  "background": {
+    "scripts": ["scripts/content/background.js"],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "Bomb_Tabs.png",
+    "default_popup":"popup.html",
+    "default_title":"Delete 50% Tabs"
+  }
+}
