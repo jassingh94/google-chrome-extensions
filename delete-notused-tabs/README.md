@@ -2,7 +2,7 @@
 # Tab Bomber 
 
 
-## Tab bomber is extension that can be used to delete tabs based on different parameters : 
+## Tab bomber is an extension that can be used to delete tabs based on different parameters : 
 -----
 
  * Delete Random number of Tabs (Just For Fun)`<TODO>`
