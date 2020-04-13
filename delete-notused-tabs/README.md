@@ -1,6 +1,5 @@
 
-# Tab Bomber 
-
+# Tab Bomber <img src="https://cdn.icon-icons.com/icons2/1465/PNG/512/409bomb_100833.png" width="3%" height="3%">
 
 ## Tab bomber is an extension that can be used to delete tabs based on different parameters : 
 -----
