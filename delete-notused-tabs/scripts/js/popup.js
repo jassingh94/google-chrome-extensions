@@ -28,6 +28,7 @@ function removeTabs(params) {
             const element = tabsAndLastActivity[index];
             if(!element){
                 tabsAndLastActivity.splice(index,1)
+                index = index - 1
             }
         }
         var tabIds = executeTechnique(technique,tabs,tabsAndLastActivity,params)
