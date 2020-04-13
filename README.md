@@ -3,4 +3,4 @@
 
 Currently Implemented Extensions : 
 
-- [Tab Bomber]()
+- [Tab Bomber](https://github.com/jassingh94/google-chrome-extensions/tree/master/delete-notused-tabs)
