@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "Delete 50% Tabs",
+  "name": "Tab Bomber",
   "version": "0.1",
   "content_security_policy":"script-src 'self' https://apis.google.com; object-src 'self'",
   "content_scripts": [
@@ -19,8 +19,8 @@
     "persistent": true
   },
   "browser_action": {
-    "default_icon": "Bomb_Tabs.png",
-    "default_popup":"popup.html",
-    "default_title":"Delete 50% Tabs"
+    "default_icon": "imgs/Bomb_Tabs.png",
+    "default_popup":"html/popup.html",
+    "default_title":"Tab Bomber"
   }
 }
