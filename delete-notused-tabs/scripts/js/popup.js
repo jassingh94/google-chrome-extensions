@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 chrome.runtime.sendMessage({ data: "Popup-Handshake" }, function (response) {
     console.log(response)
-});;
+});
 
 chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
 
@@ -24,6 +24,12 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
 function removeTabs(params) {
     chrome.tabs.getAllInWindow(null, function (tabs) {
         var technique = "lastUsedPercent";
+        for (let index = 0; index < tabsAndLastActivity.length; index++) {
+            const element = tabsAndLastActivity[index];
+            if(!element){
+                tabsAndLastActivity.splice(index,1)
+            }
+        }
         var tabIds = executeTechnique(technique,tabs,tabsAndLastActivity,params)
         tabIds.forEach(element => {
             if (element) {
@@ -31,6 +37,7 @@ function removeTabs(params) {
             }
         });
 
+        window.close();
     });
 }
 
