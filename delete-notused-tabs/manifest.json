@@ -24,6 +24,11 @@
     "default_popup":"html/popup.html",
     "default_title":"Tab Bomber"
   },
+  "icons": {
+    "16": "imgs/Bomb_Tabs.png",
+    "48": "imgs/Bomb_Tabs.png",
+    "128": "imgs/Bomb_Tabs.png"
+  },
   "options_ui": {
     "page": "html/options.html",
     "open_in_tab": false
