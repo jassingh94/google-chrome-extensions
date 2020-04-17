@@ -5,12 +5,12 @@
 -----
 
 #### Current Options : 
-     * Delete Random number of Tabs (Just For Fun)
-       * Default Option
-     * Delete Based on Last Activity in Tabs  
-        * Takes Percentage as input (Eg : 50)
-     * Delete Top N or Last N based on creation of tabs 
-        * Takes Number as input (Eg : 2 , meaning 2 tabs from top-n or bottom-n)
+   * Delete Random number of Tabs (Just For Fun)
+     * Default Option
+   * Delete Based on Last Activity in Tabs  
+     * Takes Percentage as input (Eg : 50)
+   * Delete Top N or Last N based on creation of tabs 
+     * Takes Number as input (Eg : 2 , meaning 2 tabs from top-n or bottom-n)
 
 
  * `<TODO>`
