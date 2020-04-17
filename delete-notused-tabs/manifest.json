@@ -12,7 +12,8 @@
     }
   ],
   "permissions": [
-    "tabs"
+    "tabs",
+    "storage"
   ],
   "background": {
     "scripts": ["scripts/content/background.js"],
@@ -23,5 +24,8 @@
     "default_popup":"html/popup.html",
     "default_title":"Tab Bomber"
   },
-  "options_page": "html/options.html"
+  "options_ui": {
+    "page": "html/options.html",
+    "open_in_tab": false
+  }
 }

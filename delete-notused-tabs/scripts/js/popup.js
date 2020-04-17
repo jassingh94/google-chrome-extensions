@@ -1,10 +1,11 @@
 var tabsAndLastActivity = {}
 document.addEventListener('DOMContentLoaded', function () {
-    var link = document.getElementById('clickIt');
-    // onClick's logic below:
-    link.addEventListener('click', function () {
-        removeTabs(50);
-    });
+    // var link = document.getElementById('clickIt');
+    // // onClick's logic below:
+    // link.addEventListener('click', function () {
+       
+    // });
+    
 });
 
 chrome.runtime.sendMessage({ data: "Popup-Handshake" }, function (response) {
@@ -18,28 +19,36 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
         if (message.variable) {
             tabsAndLastActivity = message.variable
         }
+        chrome.storage.sync.get({
+            tabBombTypeOfBomb: "random",
+            tabBombTypeOfBombText: 0
+        }, function (items) {
+            var technique = items.tabBombTypeOfBomb;
+            var params = { "value"  : parseInt(items.tabBombTypeOfBombText) }
+            removeTabs(technique,params);
+        });
     }
 });
 
-function removeTabs(params) {
+function removeTabs(technique , params = {}) {
+
+
     chrome.tabs.getAllInWindow(null, function (tabs) {
-        var technique = "lastUsedPercent";
         for (let index = 0; index < tabsAndLastActivity.length; index++) {
             const element = tabsAndLastActivity[index];
-            if(!element){
-                tabsAndLastActivity.splice(index,1)
+            if (!element) {
+                tabsAndLastActivity.splice(index, 1)
                 index = index - 1
             }
         }
-        var tabIds = executeTechnique(technique,tabs,tabsAndLastActivity,params)
+        var tabIds = executeTechnique(technique, tabs, tabsAndLastActivity, params)
         tabIds.forEach(element => {
             if (element) {
                 chrome.tabs.remove(element, () => { })
             }
         });
-
-        window.close();
-    });
+    window.close();
+});
 }
 
 function sort_by_key(array, key) {
