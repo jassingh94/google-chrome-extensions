@@ -4,6 +4,10 @@
 ## Bomb your tabs based on different parameters
 -----
 
+### Installation : 
+ - [LINK](https://webkul.com/blog/how-to-install-the-unpacked-extension-in-chrome/)
+
+
 #### Current Options : 
    * Delete Random number of Tabs (Just For Fun)
      * Default Option
