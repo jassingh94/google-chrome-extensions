@@ -19,6 +19,7 @@
 
  * `<TODO>`
     * Add More Options. 
+      * Delete Based on Last Activity (Eg: Not Used in last hour)
       * Preset Priority of tabs
          - Can be by URL , Or a workplace setting 
       * Whitlisting of tabs (based workplace setting of URL,Pinned tabs ,etc)
